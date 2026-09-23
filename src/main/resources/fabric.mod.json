@@ -1,0 +1,34 @@
+{
+	"schemaVersion": 1,
+	"id": "abyssal-extent",
+	"version": "${version}",
+	"name": "Abyssal Extent",
+	"description": "Abyssal Extent adds deeper ocean biomes and new exploration features",
+	"authors": [
+		"Samuel Tomko"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": ""
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/abyssal-extent/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.n0vanox.abyssalextent.AbyssalExtent"
+		],
+		"fabric-datagen": [
+			"net.n0vanox.abyssalextent.AbyssalExtentDataGenerator"
+		]
+	},
+	"mixins": [
+		"abyssal-extent.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~26.3",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}
