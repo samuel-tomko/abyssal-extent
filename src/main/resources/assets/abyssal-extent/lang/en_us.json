@@ -1,4 +1,5 @@
 {
-  "item.abyssal-extent.prismalloy_ingot": "Prismalloy Ingot"
-
+  "item.abyssal-extent.prismalloy_ingot": "Prismalloy Ingot",
+  "item.abyssal-extent.chromium":  "Chromium",
+  "creativemodetab.abyssal-extent.prismalloy_items": "Prismalloy Items"
 }
