@@ -1,5 +1,12 @@
 {
   "item.abyssal-extent.prismalloy_ingot": "Prismalloy Ingot",
   "item.abyssal-extent.chromium":  "Chromium",
+  "item.abyssal-extent.machined_scrap": "Machined Scrap",
+
+  "block.abyssal-extent.nautilus_block":  "Nautilus Block",
+  "block.abyssal-extent.prismalloy_block": "Block of Prismalloy",
+  "block.abyssal-extent.chromium_block": "Block of Chromium",
+  "block.abyssal-extent.ancient_machinery": "Ancient Machinery",
+
   "creativemodetab.abyssal-extent.prismalloy_items": "Prismalloy Items"
 }

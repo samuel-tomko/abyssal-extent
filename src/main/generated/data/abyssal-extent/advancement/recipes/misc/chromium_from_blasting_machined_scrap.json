@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_machined_scrap": {
+      "conditions": {
+        "items": [
+          {
+            "items": "abyssal-extent:machined_scrap"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipes": "abyssal-extent:chromium_from_blasting_machined_scrap"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_machined_scrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "abyssal-extent:chromium_from_blasting_machined_scrap"
+    ]
+  }
+}

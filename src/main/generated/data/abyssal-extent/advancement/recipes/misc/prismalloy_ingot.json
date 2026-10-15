@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_chromium": {
+    "has_prismalloy_block": {
       "conditions": {
         "items": [
           {
-            "items": "abyssal-extent:chromium"
+            "items": "abyssal-extent:prismalloy_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_chromium"
+      "has_prismalloy_block"
     ]
   ],
   "rewards": {

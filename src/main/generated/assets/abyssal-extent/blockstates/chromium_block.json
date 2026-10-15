@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "abyssal-extent:block/chromium_block"
+    }
+  }
+}

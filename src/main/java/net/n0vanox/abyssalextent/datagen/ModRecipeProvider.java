@@ -9,9 +9,14 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.references.ItemIds;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Recipe;
+import net.minecraft.world.level.ItemLike;
+import net.n0vanox.abyssalextent.block.ModBlocks;
 import net.n0vanox.abyssalextent.item.ModItems;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public class ModRecipeProvider extends FabricRecipeProvider {
@@ -24,12 +29,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         return new RecipeProvider(recipes, advancements) {
             @Override
             public void buildRecipes() {
+                List<ItemLike> CHROMIUM_SMELTABLES = List.of(ModItems.MACHINED_SCRAP, ModBlocks.ANCIENT_MACHINERY);
+                oreBlasting(CHROMIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CHROMIUM, 0.85f, 400, "chromium");
+
                 shapeless(RecipeCategory.MISC, ModItems.PRISMALLOY_INGOT)
                         .requires(ModItems.CHROMIUM, 4)
                         .requires(Items.PRISMARINE_CRYSTALS, 4)
                         .unlockedBy(getHasName(ModItems.CHROMIUM), has(ModItems.CHROMIUM))
                         .group("prismalloy")
+                        .save(output, "prismalloy_ingot_from_chromium");
+                shaped(RecipeCategory.DECORATIONS, ModBlocks.NAUTILUS_BLOCK)
+                        .pattern("SS")
+                        .pattern("SS")
+                        .define('S', Items.NAUTILUS_SHELL)
+                        .unlockedBy(getHasName(Items.NAUTILUS_SHELL), has(Items.NAUTILUS_SHELL))
                         .save(output);
+                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.CHROMIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHROMIUM_BLOCK);
+                nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.PRISMALLOY_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMALLOY_BLOCK);
             }
         };
     }

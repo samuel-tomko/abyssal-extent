@@ -8,6 +8,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.ItemStack;
 import net.n0vanox.abyssalextent.AbyssalExtent;
+import net.n0vanox.abyssalextent.block.ModBlocks;
 import net.n0vanox.abyssalextent.item.ModItems;
 
 public class ModCreativeModeTabs {
@@ -18,6 +19,11 @@ public class ModCreativeModeTabs {
                     .displayItems((parameters, output) -> {
                         output.accept(ModItems.PRISMALLOY_INGOT);
                         output.accept(ModItems.CHROMIUM);
+                        output.accept(ModItems.MACHINED_SCRAP);
+                        output.accept(ModBlocks.NAUTILUS_BLOCK);
+                        output.accept(ModBlocks.PRISMALLOY_BLOCK);
+                        output.accept(ModBlocks.CHROMIUM_BLOCK);
+                        output.accept(ModBlocks.ANCIENT_MACHINERY);
                     })
                     .build());
 

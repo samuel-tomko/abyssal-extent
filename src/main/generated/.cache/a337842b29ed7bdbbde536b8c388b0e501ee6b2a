@@ -1,0 +1,3 @@
+// 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Tags for minecraft:block
+15a184904a5fc225b861e2dd71cbfda03b9cff88 data/minecraft/tags/block/mineable/pickaxe.json
+76689c3ef70427ed9f4da9c6c1816de74832bdc9 data/minecraft/tags/block/needs_diamond_tool.json

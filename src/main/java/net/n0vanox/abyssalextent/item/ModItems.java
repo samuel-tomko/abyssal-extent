@@ -15,10 +15,11 @@ import java.util.function.Function;
 public class ModItems {
     public static final Item PRISMALLOY_INGOT = registerItem("prismalloy_ingot", Item::new);
     public static final Item CHROMIUM = registerItem("chromium", Item::new);
+    public static final Item MACHINED_SCRAP =  registerItem("machined_scrap", Item::new);
 
-    //public static ResourceKey<Item> getRK(ResourceKey<Item> item) {
-    //    return BuiltInRegistries.ITEM.getResourceKey(item).get();
-    //}
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
     private static Item registerItem(String name, Function<Item.Properties, Item> function) {
         return Registry.register(BuiltInRegistries.ITEM, Identifier.fromNamespaceAndPath(AbyssalExtent.MOD_ID, name),
@@ -31,6 +32,7 @@ public class ModItems {
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(PRISMALLOY_INGOT);
             output.accept(CHROMIUM);
+            output.accept(MACHINED_SCRAP);
         });
     }
 }

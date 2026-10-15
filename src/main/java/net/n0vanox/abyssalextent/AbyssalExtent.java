@@ -4,6 +4,7 @@ import net.fabricmc.api.ModInitializer;
 
 import net.minecraft.resources.Identifier;
 
+import net.n0vanox.abyssalextent.block.ModBlocks;
 import net.n0vanox.abyssalextent.item.ModItems;
 import net.n0vanox.creativemodetab.ModCreativeModeTabs;
 import org.slf4j.Logger;
@@ -20,6 +21,7 @@ public class AbyssalExtent implements ModInitializer {
 		ModCreativeModeTabs.registerModCreativeModeTabs();
 
 		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
 	}
 
 	public static Identifier id(String path) {

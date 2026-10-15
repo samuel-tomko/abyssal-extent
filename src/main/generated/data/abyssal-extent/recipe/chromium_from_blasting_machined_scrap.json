@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "blocks",
+  "cookingtime": 400,
+  "experience": 0.85,
+  "group": "chromium",
+  "ingredient": "abyssal-extent:machined_scrap",
+  "result": {
+    "id": "abyssal-extent:chromium"
+  }
+}

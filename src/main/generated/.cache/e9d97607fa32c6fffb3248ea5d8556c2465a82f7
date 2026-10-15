@@ -1,0 +1,5 @@
+// 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Block Loot Tables
+5d7738be15f0687f8f59f4eb7853d9d515a2507f data/abyssal-extent/loot_table/blocks/ancient_machinery.json
+d8d38199da94c0aa946af92d23530c786f8d60d0 data/abyssal-extent/loot_table/blocks/chromium_block.json
+dcca8efe750f4dcc346dbf31c8f3e99703c71046 data/abyssal-extent/loot_table/blocks/nautilus_block.json
+939a613f9d11deb432cf33951bc2c5337b0e0117 data/abyssal-extent/loot_table/blocks/prismalloy_block.json

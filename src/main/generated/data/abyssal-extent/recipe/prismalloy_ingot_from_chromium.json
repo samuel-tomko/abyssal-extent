@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "prismalloy",
+  "ingredients": [
+    "abyssal-extent:chromium",
+    "abyssal-extent:chromium",
+    "abyssal-extent:chromium",
+    "abyssal-extent:chromium",
+    "minecraft:prismarine_crystals",
+    "minecraft:prismarine_crystals",
+    "minecraft:prismarine_crystals",
+    "minecraft:prismarine_crystals"
+  ],
+  "result": {
+    "id": "abyssal-extent:prismalloy_ingot"
+  }
+}
