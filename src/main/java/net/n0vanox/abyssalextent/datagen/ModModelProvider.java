@@ -20,6 +20,8 @@ public class ModModelProvider extends FabricModelProvider {
         blockModelGenerators.createTrivialCube(ModBlocks.PRISMALLOY_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.CHROMIUM_BLOCK);
         blockModelGenerators.createTrivialCube(ModBlocks.ANCIENT_MACHINERY);
+
+        blockModelGenerators.createTrivialCube(ModBlocks.TRIDENT_HEAD);
     }
 
     @Override

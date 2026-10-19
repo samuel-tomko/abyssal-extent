@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.n0vanox.abyssalextent.AbyssalExtent;
 import net.minecraft.world.level.block.Block;
+import net.n0vanox.abyssalextent.block.custom.TridentHead;
 
 import java.util.function.Function;
 
@@ -29,7 +30,9 @@ public class ModBlocks {
     public static final Block ANCIENT_MACHINERY = registerBlock("ancient_machinery", properties -> new Block(properties.strength(8.0F)
             .requiresCorrectToolForDrops().sound(SoundType.METAL).instrument(NoteBlockInstrument.IRON_XYLOPHONE).mapColor(MapColor.METAL)
     ));
-
+    public static final Block TRIDENT_HEAD = registerBlock("trident_head", properties -> new TridentHead(properties.strength(1.0F)
+            .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_WART_BLOCK)
+    ));
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }

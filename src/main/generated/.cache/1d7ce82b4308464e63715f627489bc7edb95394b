@@ -1,6 +1,7 @@
 // 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Abyssal Extent Recipes
 269992a7750d9ece8af4bebb4b09ac65c1e3ca77 data/abyssal-extent/advancement/recipes/building_blocks/chromium_block.json
 44024689ccd4a9486aa8fb9b72bcd0f4f068b9ee data/abyssal-extent/advancement/recipes/building_blocks/prismalloy_block.json
+bcc6d87897b12f40e90cdc95c526f149f30ec17a data/abyssal-extent/advancement/recipes/combat/trident_head.json
 eb1216ff716d5269027e83c3550193f79af98137 data/abyssal-extent/advancement/recipes/decorations/nautilus_block.json
 a11b911ff4ccca3c481747e6ead9cab82e15a5dd data/abyssal-extent/advancement/recipes/misc/chromium.json
 0728033cfb51b923a1c56bd2f26ff9b5f0a1d69c data/abyssal-extent/advancement/recipes/misc/chromium_from_blasting_ancient_machinery.json
@@ -15,3 +16,4 @@ c8ce3028c323222b62a94248fc6427b42de0b5bd data/abyssal-extent/recipe/chromium_fro
 6ade093ed14da1f6f252bcc52e1116b915b4b6c3 data/abyssal-extent/recipe/prismalloy_block.json
 2f73a4df59cf8a859b37ee87d324f3b50201c9bd data/abyssal-extent/recipe/prismalloy_ingot.json
 fbb9c74519477c2f2be3c9f4c217bc8b5254d68f data/abyssal-extent/recipe/prismalloy_ingot_from_chromium.json
+289489f04021217f623f73ec0fdf62f5c055b56a data/abyssal-extent/recipe/trident_head.json

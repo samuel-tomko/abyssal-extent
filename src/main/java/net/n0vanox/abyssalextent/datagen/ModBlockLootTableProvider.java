@@ -19,6 +19,7 @@ public class ModBlockLootTableProvider extends FabricBlockLootSubProvider {
         dropSelf(ModBlocks.PRISMALLOY_BLOCK);
         dropSelf(ModBlocks.CHROMIUM_BLOCK);
         dropSelf(ModBlocks.NAUTILUS_BLOCK);
+        dropSelf(ModBlocks.TRIDENT_HEAD);
 
         add(ModBlocks.ANCIENT_MACHINERY, createOreDrop(ModBlocks.ANCIENT_MACHINERY, ModItems.MACHINED_SCRAP));
     }

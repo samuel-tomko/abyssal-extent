@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "P": "abyssal-extent:prismalloy_ingot",
+    "S": "minecraft:prismarine_shard"
+  },
+  "pattern": [
+    "SSS",
+    "PPP"
+  ],
+  "result": {
+    "id": "abyssal-extent:trident_head"
+  }
+}

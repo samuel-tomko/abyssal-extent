@@ -46,6 +46,13 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .save(output);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.CHROMIUM, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHROMIUM_BLOCK);
                 nineBlockStorageRecipes(RecipeCategory.MISC, ModItems.PRISMALLOY_INGOT, RecipeCategory.BUILDING_BLOCKS, ModBlocks.PRISMALLOY_BLOCK);
+                shaped(RecipeCategory.COMBAT, ModBlocks.TRIDENT_HEAD)
+                        .pattern("SSS")
+                        .pattern("PPP")
+                        .define('S', Items.PRISMARINE_SHARD)
+                        .define('P', ModItems.PRISMALLOY_INGOT)
+                        .unlockedBy(getHasName(ModItems.PRISMALLOY_INGOT), has(ModItems.PRISMALLOY_INGOT))
+                        .save(output);
             }
         };
     }

@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.PRISMALLOY_BLOCK);
                         output.accept(ModBlocks.CHROMIUM_BLOCK);
                         output.accept(ModBlocks.ANCIENT_MACHINERY);
+                        output.accept(ModBlocks.TRIDENT_HEAD);
                     })
                     .build());
 
