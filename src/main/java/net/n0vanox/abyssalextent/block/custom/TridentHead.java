@@ -74,7 +74,6 @@ public class TridentHead extends Block implements SimpleWaterloggedBlock {
     public void stepOn(Level level, BlockPos pos, BlockState onState, Entity entity) {
         if (!entity.isSteppingCarefully() && entity instanceof LivingEntity) {
             entity.hurt(level.damageSources().stalagmite(), 1.0F);
-            level.playSound(entity, pos, SoundEvents.THORNS_HIT, SoundSource.BLOCKS, 2.0F, 1.0F);
         }
         super.stepOn(level, pos, onState, entity);
     }

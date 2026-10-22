@@ -13,12 +13,13 @@ import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.n0vanox.abyssalextent.AbyssalExtent;
 import net.minecraft.world.level.block.Block;
+import net.n0vanox.abyssalextent.block.custom.NautilusBlock;
 import net.n0vanox.abyssalextent.block.custom.TridentHead;
 
 import java.util.function.Function;
 
 public class ModBlocks {
-    public static final Block NAUTILUS_BLOCK = registerBlock("nautilus_block", properties -> new Block(properties.strength(2.0F)
+    public static final Block NAUTILUS_BLOCK = registerBlock("nautilus_block", properties -> new NautilusBlock(properties.strength(2.0F)
             .requiresCorrectToolForDrops().sound(SoundType.BONE_BLOCK).instrument(NoteBlockInstrument.XYLOPHONE).mapColor(MapColor.TERRACOTTA_ORANGE)
     ));
     public static final Block PRISMALLOY_BLOCK = registerBlock("prismalloy_block", properties -> new Block(properties.strength(6.0F)
