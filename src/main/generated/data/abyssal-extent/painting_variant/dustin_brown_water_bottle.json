@@ -1,0 +1,13 @@
+{
+  "asset_id": "abyssal-extent:dustin_brown_water_bottle",
+  "author": {
+    "color": "gray",
+    "translate": "painting.abyssal-extent.dustin_brown_water_bottle.author"
+  },
+  "height": 5,
+  "title": {
+    "color": "yellow",
+    "translate": "painting.abyssal-extent.dustin_brown_water_bottle.title"
+  },
+  "width": 4
+}

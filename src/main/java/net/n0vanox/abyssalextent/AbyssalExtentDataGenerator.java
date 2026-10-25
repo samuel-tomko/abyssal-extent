@@ -2,10 +2,9 @@ package net.n0vanox.abyssalextent;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.n0vanox.abyssalextent.datagen.ModBlockLootTableProvider;
-import net.n0vanox.abyssalextent.datagen.ModBlockTagsProvider;
-import net.n0vanox.abyssalextent.datagen.ModModelProvider;
-import net.n0vanox.abyssalextent.datagen.ModRecipeProvider;
+import net.minecraft.core.RegistrySetBuilder;
+import net.minecraft.core.registries.Registries;
+import net.n0vanox.abyssalextent.datagen.*;
 
 public class AbyssalExtentDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -15,5 +14,13 @@ public class AbyssalExtentDataGenerator implements DataGeneratorEntrypoint {
 		pack.addProvider(ModBlockTagsProvider::new);
 		pack.addProvider(ModBlockLootTableProvider::new);
 		pack.addProvider(ModRecipeProvider::new);
+		pack.addProvider(ModRegistryDataProvider::new);
+		pack.addProvider(ModPaintingTagsProvider::new);
+	}
+
+	@Override
+	public void buildRegistry(RegistrySetBuilder registryBuilder) {
+		registryBuilder.add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap);
+		registryBuilder.add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap);
 	}
 }

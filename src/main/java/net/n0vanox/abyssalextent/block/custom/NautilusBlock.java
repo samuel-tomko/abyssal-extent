@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
+//when update to 26.3 tutorial drops, make this extends BaseEntityBlock implements SimpleWaterloggedBlock
 public class NautilusBlock extends Block {
     public static final VoxelShape SHAPE = Block.box(1, 0, 0, 15, 18, 16);
 

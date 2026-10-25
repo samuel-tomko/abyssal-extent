@@ -22,6 +22,7 @@ import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.pathfinder.PathComputationType;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.n0vanox.abyssalextent.datagen.ModDamageTypes;
 
 public class TridentHead extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
@@ -73,14 +74,14 @@ public class TridentHead extends Block implements SimpleWaterloggedBlock {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState onState, Entity entity) {
         if (!entity.isSteppingCarefully() && entity instanceof LivingEntity) {
-            entity.hurt(level.damageSources().stalagmite(), 1.0F);
+            entity.hurt(ModDamageTypes.create(level, ModDamageTypes.SPIKES), 1.0F);
         }
         super.stepOn(level, pos, onState, entity);
     }
 
     @Override
     public void fallOn(Level level, BlockState state, BlockPos pos, Entity entity, double fallDistance) {
-        entity.causeFallDamage(fallDistance + 2.5, 2.0F, level.damageSources().stalagmite());
+        entity.causeFallDamage(fallDistance + 2.5, 2.0F, ModDamageTypes.create(level, ModDamageTypes.SPIKES));
         super.fallOn(level, state, pos, entity, fallDistance);
     }
 

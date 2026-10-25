@@ -30,7 +30,8 @@ public class ModRecipeProvider extends FabricRecipeProvider {
             @Override
             public void buildRecipes() {
                 List<ItemLike> CHROMIUM_SMELTABLES = List.of(ModItems.MACHINED_SCRAP, ModBlocks.ANCIENT_MACHINERY);
-                oreBlasting(CHROMIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CHROMIUM, 0.85f, 400, "chromium");
+                oreBlasting(CHROMIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CHROMIUM, 0.85f, 100, "chromium");
+                oreSmelting(CHROMIUM_SMELTABLES, RecipeCategory.MISC, CookingBookCategory.BLOCKS, ModItems.CHROMIUM, 0.85f, 200, "chromium");
 
                 shapeless(RecipeCategory.MISC, ModItems.PRISMALLOY_INGOT)
                         .requires(ModItems.CHROMIUM, 4)

@@ -9,5 +9,11 @@
   "block.abyssal-extent.ancient_machinery": "Ancient Machinery",
   "block.abyssal-extent.trident_head": "Trident Head",
 
+  "death.attack.spikes": "%s was impaled by spikes",
+  "death.attack.spikes.player": "%s was knocked into spikes by %s",
+
+  "painting.abyssal-extent.dustin_brown_water_bottle.title": "Dustin Brown Water Bottle",
+  "painting.abyssal-extent.dustin_brown_water_bottle.author": "nhluganda",
+
   "creativemodetab.abyssal-extent.prismalloy_items": "Prismalloy Items"
 }

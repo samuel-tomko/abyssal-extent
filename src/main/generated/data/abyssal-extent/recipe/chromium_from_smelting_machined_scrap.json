@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.85,
+  "group": "chromium",
+  "ingredient": "abyssal-extent:machined_scrap",
+  "result": {
+    "id": "abyssal-extent:chromium"
+  }
+}
