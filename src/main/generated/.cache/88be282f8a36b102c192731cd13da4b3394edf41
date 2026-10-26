@@ -5,6 +5,7 @@ e9f05e98f1a588d024bcdad214c79160fb19b765 assets/abyssal-extent/blockstates/ancie
 fc6faf557666e324a94349f94d84dc1ec9abec9a assets/abyssal-extent/blockstates/prismalloy_block.json
 7e10d01082b8e3606f55a69f5cd50056f612a183 assets/abyssal-extent/blockstates/trident_head.json
 e5474e1506f2c729e92910d4c9b4ca3de6abb9ad assets/abyssal-extent/items/ancient_machinery.json
+3f88468921a8fb2846647484f6cf2eefea4ae4e4 assets/abyssal-extent/items/anglerfish_spawn_egg.json
 b3a4e35f3fb655bb4f51fe391e9f83a87cd4c7ad assets/abyssal-extent/items/chromium.json
 3d494ea4ef0ef35f6315747c9e62814f9b816363 assets/abyssal-extent/items/chromium_block.json
 45f87af735886533bb3a0813b72c5ac4e3ffa7d2 assets/abyssal-extent/items/machined_scrap.json
@@ -16,6 +17,7 @@ b83b7bae17234f44f67fdd4cb16382d66263438d assets/abyssal-extent/models/block/anci
 cd43d9998a978f113ba6806d1f8e9761bef2ecde assets/abyssal-extent/models/block/chromium_block.json
 31ab1264e384396ee0f8cc5ea5f140209f74a97a assets/abyssal-extent/models/block/prismalloy_block.json
 be53550ae7b01c1e241d915f2ea8d3ceef47ef1a assets/abyssal-extent/models/block/trident_head.json
+4d3004351c9b2af72b91059d08c063408ac3bc31 assets/abyssal-extent/models/item/anglerfish_spawn_egg.json
 71d11c01a886199ca68039d101038eccdd08dd84 assets/abyssal-extent/models/item/chromium.json
 244b817455a63f7a7a5f8384e6bb94af49cefd85 assets/abyssal-extent/models/item/machined_scrap.json
 1cadbccb4c6f5947c3cec773ae971c0c05436b87 assets/abyssal-extent/models/item/prismalloy_ingot.json

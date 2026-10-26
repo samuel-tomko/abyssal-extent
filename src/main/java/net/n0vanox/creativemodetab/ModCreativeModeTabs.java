@@ -25,6 +25,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.CHROMIUM_BLOCK);
                         output.accept(ModBlocks.ANCIENT_MACHINERY);
                         output.accept(ModBlocks.TRIDENT_HEAD);
+                        output.accept(ModItems.ANGLERFISH_SPAWN_EGG);
                     })
                     .build());
 

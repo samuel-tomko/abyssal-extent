@@ -3,6 +3,8 @@
   "item.abyssal-extent.chromium":  "Chromium",
   "item.abyssal-extent.machined_scrap": "Machined Scrap",
 
+  "item.abyssal-extent.anglerfish_spawn_egg": "Anglerfish Spawn Egg",
+
   "block.abyssal-extent.nautilus_block":  "Nautilus Block",
   "block.abyssal-extent.prismalloy_block": "Block of Prismalloy",
   "block.abyssal-extent.chromium_block": "Block of Chromium",
@@ -14,6 +16,8 @@
 
   "painting.abyssal-extent.dustin_brown_water_bottle.title": "Dustin Brown Water Bottle",
   "painting.abyssal-extent.dustin_brown_water_bottle.author": "nhluganda",
+
+  "entity.abyssal-extent.anglerfish": "Anglerfish",
 
   "creativemodetab.abyssal-extent.prismalloy_items": "Prismalloy Items"
 }

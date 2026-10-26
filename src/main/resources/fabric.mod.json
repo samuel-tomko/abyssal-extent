@@ -18,6 +18,9 @@
 		"main": [
 			"net.n0vanox.abyssalextent.AbyssalExtent"
 		],
+		"client": [
+			"net.n0vanox.abyssalextent.AbyssalExtentClient"
+		],
 		"fabric-datagen": [
 			"net.n0vanox.abyssalextent.AbyssalExtentDataGenerator"
 		]
