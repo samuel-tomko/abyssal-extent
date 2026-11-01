@@ -8,7 +8,7 @@ import net.n0vanox.abyssalextent.entity.custom.AnglerfishEntity;
 
 public class AnglerfishRenderer extends MobRenderer<AnglerfishEntity, AnglerfishRenderState, AnglerfishModel> {
     public AnglerfishRenderer(EntityRendererProvider.Context context) {
-        super(context, new AnglerfishModel(context.bakeLayer(ModModelLayerLocations.ANGLERFISH)), 0.25f);
+        super(context, new AnglerfishModel(context.bakeLayer(ModModelLayerLocations.ANGLERFISH)), 0.1f);
     }
 
     @Override

@@ -31,5 +31,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.MACHINED_SCRAP, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.ANGLERFISH_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.ANGLERFISH_BUCKET, ModelTemplates.FLAT_ITEM);
     }
 }

@@ -1,8 +1,14 @@
 package net.n0vanox.abyssalextent.item;
 
 import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.animal.fish.AbstractFish;
 import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.MobBucketItem;
 import net.minecraft.world.item.SpawnEggItem;
+import net.minecraft.world.level.material.Fluids;
+import net.minecraft.world.level.material.WaterFluid;
 import net.n0vanox.abyssalextent.AbyssalExtent;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -11,6 +17,7 @@ import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.Item;
 import net.n0vanox.abyssalextent.entity.ModEntities;
+import net.n0vanox.abyssalextent.entity.custom.AnglerfishEntity;
 
 import java.util.function.Function;
 
@@ -21,6 +28,10 @@ public class ModItems {
 
     public static final Item ANGLERFISH_SPAWN_EGG = registerItem("anglerfish_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.ANGLERFISH)));
+
+    public static final Item ANGLERFISH_BUCKET = registerItem("anglerfish_bucket",
+            properties -> new MobBucketItem(ModEntities.ANGLERFISH,
+                    Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, properties.stacksTo(1)));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

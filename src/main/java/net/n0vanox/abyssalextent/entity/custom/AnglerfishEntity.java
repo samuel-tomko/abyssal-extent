@@ -1,13 +1,13 @@
 package net.n0vanox.abyssalextent.entity.custom;
 
+import net.minecraft.core.BlockPos;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.tags.FluidTags;
 import net.minecraft.util.Mth;
-import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MoverType;
-import net.minecraft.world.entity.PathfinderMob;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
@@ -20,24 +20,27 @@ import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.fish.AbstractFish;
+import net.minecraft.world.entity.animal.fish.WaterAnimal;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.phys.Vec3;
+import net.n0vanox.abyssalextent.item.ModItems;
 
-public class AnglerfishEntity extends Monster {
+public class AnglerfishEntity extends AbstractFish implements Bucketable {
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
     protected static final int ATTACK_TIME = 80;
 
-
-    public AnglerfishEntity(EntityType<? extends Monster> type, Level level) {
+    public AnglerfishEntity(EntityType<? extends AbstractFish> type, Level level) {
         super(type, level);
         this.xpReward = 3;
-        this.setPathfindingMalus(PathType.WATER, 0.0F);
 
+        setPathfindingMalus(PathType.WATER, 0.0F);
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -50,21 +53,59 @@ public class AnglerfishEntity extends Monster {
 
     @Override
     protected void registerGoals() {
-        //this.goalSelector.addGoal(0, new FloatGoal(this));
-        this.goalSelector.addGoal(0, new RandomSwimmingGoal(this, 10, 200));
-        this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.0D, false));
-        this.goalSelector.addGoal(1, new NearestAttackableTargetGoal<>(this, AbstractFish.class, true));
-        this.goalSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        //this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.addGoal(0,
+                new RandomSwimmingGoal(this, 1.0D, 40));
 
+        this.targetSelector.addGoal(1,
+                new NearestAttackableTargetGoal<>(this, AbstractFish.class, true));
+        this.targetSelector.addGoal(2,
+                new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
+    @Override
+    public boolean canRandomSwim() {
+        return true;
+    }
+
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return SoundEvents.COD_AMBIENT;
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return SoundEvents.COD_DEATH;
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(final DamageSource source) {
+        return SoundEvents.COD_HURT;
+    }
+
+    @Override
     protected SoundEvent getFlopSound() {
         return SoundEvents.COD_FLOP;
     }
 
+    public static boolean checkSurfaceWaterAnimalSpawnRules(
+            final EntityType<? extends WaterAnimal> type, final LevelAccessor level, final EntitySpawnReason spawnReason, final BlockPos pos, final RandomSource random
+    ) {
+        int seaLevel = level.getSeaLevel();
+        int minSpawnLevel = seaLevel - 40;
+        return pos.getY() >= minSpawnLevel
+                && pos.getY() <= seaLevel
+                && level.getFluidState(pos.below()).is(FluidTags.WATER)
+                && level.getBlockState(pos.above()).is(Blocks.WATER);
+    }
 
+    @Override
+    public ItemStack getBucketItemStack() {
+        return new ItemStack(ModItems.ANGLERFISH_BUCKET);
+    }
 
     //ANIMATIONS
+
     private void setupAnimationStates() {
         if (this.idleAnimationTimeout <= 0) {
             this.idleAnimationTimeout = 60;
@@ -82,5 +123,4 @@ public class AnglerfishEntity extends Monster {
             this.setupAnimationStates();
         }
     }
-
 }

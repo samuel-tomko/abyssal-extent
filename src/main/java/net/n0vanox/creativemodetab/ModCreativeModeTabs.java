@@ -17,15 +17,24 @@ public class ModCreativeModeTabs {
             FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.PRISMALLOY_INGOT))
                     .title(Component.translatable("creativemodetab.abyssal-extent.prismalloy_items"))
                     .displayItems((parameters, output) -> {
-                        output.accept(ModItems.PRISMALLOY_INGOT);
-                        output.accept(ModItems.CHROMIUM);
-                        output.accept(ModItems.MACHINED_SCRAP);
-                        output.accept(ModBlocks.NAUTILUS_BLOCK);
-                        output.accept(ModBlocks.PRISMALLOY_BLOCK);
-                        output.accept(ModBlocks.CHROMIUM_BLOCK);
                         output.accept(ModBlocks.ANCIENT_MACHINERY);
+                        output.accept(ModItems.MACHINED_SCRAP);
+                        output.accept(ModItems.CHROMIUM);
+                        output.accept(ModBlocks.CHROMIUM_BLOCK);
+                        output.accept(ModItems.PRISMALLOY_INGOT);
+                        output.accept(ModBlocks.PRISMALLOY_BLOCK);
                         output.accept(ModBlocks.TRIDENT_HEAD);
+                    })
+                    .build());
+
+    public static final CreativeModeTab ENTITIES_TAB = Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB,
+            Identifier.fromNamespaceAndPath(AbyssalExtent.MOD_ID, "life_items"),
+            FabricCreativeModeTab.builder().icon(() -> new ItemStack(ModItems.ANGLERFISH_SPAWN_EGG))
+                    .title(Component.translatable("creativemodetab.abyssal-extent.life_items"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(ModBlocks.NAUTILUS_BLOCK);
                         output.accept(ModItems.ANGLERFISH_SPAWN_EGG);
+                        output.accept(ModItems.ANGLERFISH_BUCKET);
                     })
                     .build());
 
