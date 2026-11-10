@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/spear_in_hand",
+  "textures": {
+    "layer0": "abyssal-extent:item/prismalloy_spear_in_hand"
+  }
+}

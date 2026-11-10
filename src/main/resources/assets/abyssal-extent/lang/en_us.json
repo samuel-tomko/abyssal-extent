@@ -3,6 +3,19 @@
   "item.abyssal-extent.chromium":  "Chromium",
   "item.abyssal-extent.machined_scrap": "Machined Scrap",
 
+  "item.abyssal-extent.prismalloy_upgrade_smithing_template": "Prismalloy Upgrade",
+  "item.abyssal-extent.smithing_template.prismalloy_upgrade.applies_to": "Diamond Equipment",
+  "item.abyssal-extent.smithing_template.prismalloy_upgrade.ingredients": "Prismalloy Ingot",
+  "item.abyssal-extent.smithing_template.prismalloy_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
+  "item.abyssal-extent.smithing_template.prismalloy_upgrade.additions_slot_description": "Add Prismalloy Ingot",
+
+  "item.abyssal-extent.prismalloy_sword": "Prismalloy Sword",
+  "item.abyssal-extent.prismalloy_pickaxe": "Prismalloy Pickaxe",
+  "item.abyssal-extent.prismalloy_shovel": "Prismalloy Shovel",
+  "item.abyssal-extent.prismalloy_axe": "Prismalloy Axe",
+  "item.abyssal-extent.prismalloy_hoe": "Prismalloy Hoe",
+  "item.abyssal-extent.prismalloy_spear": "Prismalloy Spear",
+
   "item.abyssal-extent.anglerfish_spawn_egg": "Anglerfish Spawn Egg",
   "item.abyssal-extent.anglerfish_bucket": "Bucket of Anglerfish",
 

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "B": "minecraft:prismarine",
+    "D": "minecraft:diamond",
+    "T": "abyssal-extent:prismalloy_upgrade_smithing_template"
+  },
+  "pattern": [
+    "DTD",
+    "DBD",
+    "DDD"
+  ],
+  "result": {
+    "count": 2,
+    "id": "abyssal-extent:prismalloy_upgrade_smithing_template"
+  }
+}

@@ -1,11 +1,14 @@
 package net.n0vanox.abyssalextent.block;
 
+import net.fabricmc.fabric.api.creativetab.v1.CreativeModeTabEvents;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -52,5 +55,20 @@ public class ModBlocks {
 
     public static void registerModBlocks() {
         AbyssalExtent.LOGGER.info("Registering Mod Blocks for " + AbyssalExtent.MOD_ID);
+
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.BUILDING_BLOCKS).register(output -> {
+            output.accept(PRISMALLOY_BLOCK);
+            output.accept(CHROMIUM_BLOCK);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.NATURAL_BLOCKS).register(output -> {
+            output.accept(ANCIENT_MACHINERY);
+            output.accept(NAUTILUS_BLOCK);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
+            output.accept(TRIDENT_HEAD);
+        });
+        CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(output -> {
+            output.accept(NAUTILUS_BLOCK);
+        });
     }
 }

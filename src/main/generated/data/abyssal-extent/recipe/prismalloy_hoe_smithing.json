@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "abyssal-extent:prismalloy_ingot",
+  "base": "minecraft:diamond_hoe",
+  "result": {
+    "id": "abyssal-extent:prismalloy_hoe"
+  },
+  "template": "abyssal-extent:prismalloy_upgrade_smithing_template"
+}

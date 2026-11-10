@@ -6,10 +6,12 @@ import net.minecraft.advancements.Advancement;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeProvider;
+import net.minecraft.data.recipes.SmithingTransformRecipeBuilder;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.references.ItemIds;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.CookingBookCategory;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
 import net.n0vanox.abyssalextent.block.ModBlocks;
@@ -54,6 +56,72 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                         .define('P', ModItems.PRISMALLOY_INGOT)
                         .unlockedBy(getHasName(ModItems.PRISMALLOY_INGOT), has(ModItems.PRISMALLOY_INGOT))
                         .save(output);
+                shaped(RecipeCategory.MISC, ModItems.PRISMALLOY_UPGRADE, 2)
+                        .pattern("DTD")
+                        .pattern("DBD")
+                        .pattern("DDD")
+                        .define('D', Items.DIAMOND)
+                        .define('T', ModItems.PRISMALLOY_UPGRADE)
+                        .define('B', Items.PRISMARINE)
+                        .unlockedBy(getHasName(ModItems.PRISMALLOY_UPGRADE), has(ModItems.PRISMALLOY_UPGRADE))
+                        .save(output, "prismalloy_upgrade_from_prismarine");
+                shaped(RecipeCategory.MISC, ModItems.PRISMALLOY_UPGRADE, 2)
+                        .pattern("DTD")
+                        .pattern("DBD")
+                        .pattern("DDD")
+                        .define('D', Items.DIAMOND)
+                        .define('T', ModItems.PRISMALLOY_UPGRADE)
+                        .define('B', Items.PRISMARINE_BRICKS)
+                        .unlockedBy(getHasName(ModItems.PRISMALLOY_UPGRADE), has(ModItems.PRISMALLOY_UPGRADE))
+                        .save(output, "prismalloy_upgrade_from_prismarine_bricks");
+                SmithingTransformRecipeBuilder.smithing(
+                        Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                        Ingredient.of(Items.DIAMOND_SWORD),
+                        Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                        RecipeCategory.COMBAT,
+                        ModItems.PRISMALLOY_SWORD)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_sword_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_PICKAXE),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.TOOLS,
+                                ModItems.PRISMALLOY_PICKAXE)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_pickaxe_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_SHOVEL),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.TOOLS,
+                                ModItems.PRISMALLOY_SHOVEL)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_shovel_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_AXE),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_AXE)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_axe_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_HOE),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.TOOLS,
+                                ModItems.PRISMALLOY_HOE)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_hoe_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_SPEAR),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_SPEAR)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_spear_smithing");
             }
         };
     }

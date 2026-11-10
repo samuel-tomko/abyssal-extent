@@ -1,3 +1,5 @@
 // 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Tags for minecraft:block
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/abyssal-extent/tags/block/incorrect_for_prismalloy_tool.json
+a249c46329a41538f49a564e1f14338aaf1be5a0 data/abyssal-extent/tags/block/needs_prismalloy_tool.json
 15a184904a5fc225b861e2dd71cbfda03b9cff88 data/minecraft/tags/block/mineable/pickaxe.json
 76689c3ef70427ed9f4da9c6c1816de74832bdc9 data/minecraft/tags/block/needs_diamond_tool.json

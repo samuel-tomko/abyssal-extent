@@ -32,5 +32,14 @@ public class ModModelProvider extends FabricModelProvider {
 
         itemModelGenerators.generateFlatItem(ModItems.ANGLERFISH_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ANGLERFISH_BUCKET, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_UPGRADE, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_SWORD, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_PICKAXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_SHOVEL, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
+        itemModelGenerators.generateSpear(ModItems.PRISMALLOY_SPEAR);
     }
 }

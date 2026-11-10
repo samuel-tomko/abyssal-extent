@@ -24,6 +24,13 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PRISMALLOY_INGOT);
                         output.accept(ModBlocks.PRISMALLOY_BLOCK);
                         output.accept(ModBlocks.TRIDENT_HEAD);
+                        output.accept(ModItems.PRISMALLOY_SWORD);
+                        output.accept(ModItems.PRISMALLOY_PICKAXE);
+                        output.accept(ModItems.PRISMALLOY_SHOVEL);
+                        output.accept(ModItems.PRISMALLOY_AXE);
+                        output.accept(ModItems.PRISMALLOY_HOE);
+                        output.accept(ModItems.PRISMALLOY_SPEAR);
+                        output.accept(ModItems.PRISMALLOY_UPGRADE);
                     })
                     .build());
 

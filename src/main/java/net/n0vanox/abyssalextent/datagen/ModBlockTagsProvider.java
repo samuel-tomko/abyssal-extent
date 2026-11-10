@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.tags.BlockTags;
 import net.n0vanox.abyssalextent.block.ModBlocks;
+import net.n0vanox.abyssalextent.tags.ModTags;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -26,5 +27,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.PRISMALLOY_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.CHROMIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.ANCIENT_MACHINERY));
+
+        tag(ModTags.Blocks.NEEDS_PRISMALLOY_TOOL).addTag(BlockTags.NEEDS_DIAMOND_TOOL);
+        tag(ModTags.Blocks.INCORRECT_FOR_PRISMALLOY_TOOL).addTag(BlockTags.NEEDS_DIAMOND_TOOL);
     }
 }
