@@ -4,7 +4,7 @@
 	"texture_size": [128, 128],
 	"textures": {
 		"0": "abyssal-extent:block/nautilus_block",
-		"particle": "abyssal-extent:block/nautilus_block"
+		"particle": "abyssal-extent:block/nautilus_block_particle"
 	},
 	"display": {
 		"gui": {
@@ -102,8 +102,8 @@
 		},
 		{
 			"name": "shell6",
-			"from": [1, 0, 13],
-			"to": [15, 0, 16],
+			"from": [1, 0.01, 13],
+			"to": [15, 0.01, 16],
 			"rotation": {"angle": 0, "axis": "y", "origin": [1, 0, 13]},
 			"faces": {
 				"north": {"uv": [0.625, 7.375, 2.375, 7.375], "texture": "#0"},
