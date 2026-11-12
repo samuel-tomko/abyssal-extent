@@ -53,8 +53,8 @@ public class AnglerfishEntity extends AbstractFish implements Bucketable {
 
     @Override
     protected void registerGoals() {
-        //this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.0D, false));
-        this.goalSelector.addGoal(0,
+        this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.0D, false));
+        this.goalSelector.addGoal(1,
                 new RandomSwimmingGoal(this, 1.0D, 40));
 
         this.targetSelector.addGoal(1,
