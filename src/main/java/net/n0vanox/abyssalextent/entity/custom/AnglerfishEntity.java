@@ -11,10 +11,7 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.control.MoveControl;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.RandomSwimmingGoal;
-import net.minecraft.world.entity.ai.goal.TryFindLiquidGoal;
+import net.minecraft.world.entity.ai.goal.*;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
@@ -46,7 +43,7 @@ public class AnglerfishEntity extends AbstractFish implements Bucketable {
     public static AttributeSupplier.Builder createAttributes() {
         return AbstractFish.createLivingAttributes()
                 .add(Attributes.MAX_HEALTH, 6.0D)
-                .add(Attributes.MOVEMENT_SPEED, 0.25D)
+                .add(Attributes.MOVEMENT_SPEED, 1.0D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0D)
                 .add(Attributes.FOLLOW_RANGE, 12.0D);
     }
@@ -56,6 +53,7 @@ public class AnglerfishEntity extends AbstractFish implements Bucketable {
         this.goalSelector.addGoal(0, new MeleeAttackGoal(this, 1.0D, false));
         this.goalSelector.addGoal(1,
                 new RandomSwimmingGoal(this, 1.0D, 40));
+        this.goalSelector.addGoal(2, new RandomLookAroundGoal(this));
 
         this.targetSelector.addGoal(1,
                 new NearestAttackableTargetGoal<>(this, AbstractFish.class, true));

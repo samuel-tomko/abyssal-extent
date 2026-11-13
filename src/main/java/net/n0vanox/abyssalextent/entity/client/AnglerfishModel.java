@@ -29,16 +29,16 @@ public class AnglerfishModel extends EntityModel<AnglerfishRenderState> {
         PartDefinition partdefinition = meshdefinition.getRoot();
 
         PartDefinition tail = partdefinition.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 6).addBox(-0.5F, -1.5F, 0.0F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F))
-                .texOffs(8, 6).addBox(0.0F, -2.0F, 0.5F, 0.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.5F, 23.0F, 1.0F));
+                .texOffs(8, 6).addBox(0.0F, -2.0F, 0.5F, 0.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 23.0F, 1.5F));
 
-        PartDefinition lure = partdefinition.addOrReplaceChild("lure", CubeListBuilder.create(), PartPose.offset(0.5F, 21.5F, -2.0F));
+        PartDefinition lure = partdefinition.addOrReplaceChild("lure", CubeListBuilder.create(), PartPose.offset(0.0F, 21.5F, -1.5F));
 
-        PartDefinition lurebulb_r1 = lure.addOrReplaceChild("lurebulb_r1", CubeListBuilder.create().texOffs(2, 9).addBox(1.0F, -2.0F, -1.0F, 0.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, 0.0F, -0.5F, 0.8727F, 0.0F, 0.0F));
+        PartDefinition lurebulb_r1 = lure.addOrReplaceChild("lurebulb_r1", CubeListBuilder.create().texOffs(2, 10).addBox(0.0F, -2.0F, -1.0F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 0.0F, -0.5F, 0.8727F, 0.0F, 0.0F));
 
         PartDefinition lure_r1 = lure.addOrReplaceChild("lure_r1", CubeListBuilder.create().texOffs(0, 9).addBox(1.0F, -2.0F, -1.0F, 0.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-1.0F, -0.5F, 0.5F, 0.8727F, 0.0F, 0.0F));
 
         PartDefinition main = partdefinition.addOrReplaceChild("main", CubeListBuilder.create().texOffs(0, 0).addBox(-1.0F, -3.0F, -2.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F))
-                .texOffs(4, 6).addBox(0.5F, -4.0F, -1.5F, 0.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 24.0F, 0.0F));
+                .texOffs(4, 6).addBox(0.5F, -4.0F, -1.5F, 0.0F, 1.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(-0.5F, 24.0F, 0.5F));
 
         return LayerDefinition.create(meshdefinition, 16, 16);
     }

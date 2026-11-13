@@ -27,6 +27,8 @@ public class AbyssalExtent implements ModInitializer {
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 
+		ModEntities.registerModEntities();
+
 		FabricDefaultAttributeRegistry.register(ModEntities.ANGLERFISH, AnglerfishEntity.createAttributes());
 	}
 

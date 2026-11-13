@@ -16,7 +16,7 @@ public class ModEntities {
 
     public static final EntityType<AnglerfishEntity> ANGLERFISH = Registry.register(BuiltInRegistries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(AbyssalExtent.MOD_ID, "anglerfish"),
-            EntityType.Builder.of(AnglerfishEntity::new, MobCategory.WATER_CREATURE).sized(0.1875f, 0.25f).build(ANGLERFISH_KEY));
+            EntityType.Builder.of(AnglerfishEntity::new, MobCategory.WATER_CREATURE).sized(0.1875f, 0.1875f).build(ANGLERFISH_KEY));
 
     public static void registerModEntities() {
         AbyssalExtent.LOGGER.info("Registering Mod Entities for " + AbyssalExtent.MOD_ID);
