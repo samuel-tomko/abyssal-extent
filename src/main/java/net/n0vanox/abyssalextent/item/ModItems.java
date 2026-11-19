@@ -5,6 +5,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.animal.fish.AbstractFish;
 import net.minecraft.world.item.*;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.level.material.WaterFluid;
 import net.n0vanox.abyssalextent.AbyssalExtent;
@@ -45,6 +46,15 @@ public class ModItems {
     public static final Item PRISMALLOY_SPEAR = registerItem("prismalloy_spear",
             properties -> new Item(properties.spear(ModToolMaterials.PRISMALLOY, 1.15F, 1.2F, 0.4F,
                     2.5F, 9.0F, 5.5F, 5.1F, 8.75F, 4.6F)));
+
+    public static final Item PRISMALLOY_HELMET = registerItem("prismalloy_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final Item PRISMALLOY_CHESTPLATE = registerItem("prismalloy_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final Item PRISMALLOY_LEGGINGS = registerItem("prismalloy_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final Item PRISMALLOY_BOOTS = registerItem("prismalloy_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
     public static final Item PRISMALLOY_UPGRADE = registerItem("prismalloy_upgrade_smithing_template", ModSmithingTemplates::createPrismalloyUpgrade);
 

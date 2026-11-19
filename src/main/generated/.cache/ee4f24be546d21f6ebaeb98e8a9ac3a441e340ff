@@ -1,6 +1,10 @@
 // 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Tags for minecraft:item
 49933d004327787ff8d029d7aaaeb29c603dc38d data/minecraft/tags/item/axes.json
+e6931c8b880f847626e7dbe82b82de00f97c29af data/minecraft/tags/item/chest_armor.json
+b375b6676bb57859c47721d5895ca1147d2e286f data/minecraft/tags/item/foot_armor.json
+a58d0525f15065f31c48a2e83ad050eace9c58ff data/minecraft/tags/item/head_armor.json
 fb998c2c1f8b98cc026f06ed539b81ce260088a9 data/minecraft/tags/item/hoes.json
+91053b3be70065fe282e5a200be11801f7f84ba8 data/minecraft/tags/item/leg_armor.json
 eea2298d13e07b690777099ea7823dd6f64a9128 data/minecraft/tags/item/pickaxes.json
 3cd3d813557212d94a38b31a2a9fdb901723c8fd data/minecraft/tags/item/shovels.json
 05fff056318c7f8005b9f9972d59b036da2fbaf0 data/minecraft/tags/item/spears.json

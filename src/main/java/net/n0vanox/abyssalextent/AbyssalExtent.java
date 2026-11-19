@@ -10,6 +10,7 @@ import net.n0vanox.abyssalextent.entity.ModEntities;
 import net.n0vanox.abyssalextent.entity.client.AnglerfishModel;
 import net.n0vanox.abyssalextent.entity.custom.AnglerfishEntity;
 import net.n0vanox.abyssalextent.item.ModItems;
+import net.n0vanox.abyssalextent.worldgen.gen.ModWorldGeneration;
 import net.n0vanox.creativemodetab.ModCreativeModeTabs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -26,6 +27,8 @@ public class AbyssalExtent implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModWorldGeneration.generateModWorldGen();
 
 		ModEntities.registerModEntities();
 

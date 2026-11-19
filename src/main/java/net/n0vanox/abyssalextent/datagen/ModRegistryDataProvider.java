@@ -18,6 +18,9 @@ public class ModRegistryDataProvider extends FabricDynamicRegistryProvider {
     protected void configure(HolderLookup.Provider registries, Entries entries) {
         entries.addAll(registries.lookupOrThrow(Registries.PAINTING_VARIANT));
         entries.addAll(registries.lookupOrThrow(Registries.DAMAGE_TYPE));
+
+        entries.addAll(registries.lookupOrThrow(Registries.FEATURE));
+        entries.addAll(registries.lookupOrThrow(Registries.PLACED_FEATURE));
     }
 
     @Override

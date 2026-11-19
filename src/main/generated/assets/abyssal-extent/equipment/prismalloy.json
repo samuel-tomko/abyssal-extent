@@ -1,0 +1,19 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "abyssal-extent:prismalloy"
+      }
+    ],
+    "humanoid_baby": [
+      {
+        "texture": "abyssal-extent:prismalloy"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "abyssal-extent:prismalloy"
+      }
+    ]
+  }
+}

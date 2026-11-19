@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": "abyssal-extent:prismalloy_ingot",
+  "base": "minecraft:diamond_leggings",
+  "result": {
+    "id": "abyssal-extent:prismalloy_leggings"
+  },
+  "template": "abyssal-extent:prismalloy_upgrade_smithing_template"
+}

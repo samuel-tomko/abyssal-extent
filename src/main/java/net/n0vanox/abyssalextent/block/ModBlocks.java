@@ -17,6 +17,7 @@ import net.minecraft.world.level.material.MapColor;
 import net.n0vanox.abyssalextent.AbyssalExtent;
 import net.minecraft.world.level.block.Block;
 import net.n0vanox.abyssalextent.block.custom.NautilusBlock;
+import net.n0vanox.abyssalextent.block.custom.SeaMine;
 import net.n0vanox.abyssalextent.block.custom.TridentHead;
 
 import java.util.function.Function;
@@ -37,6 +38,9 @@ public class ModBlocks {
     public static final Block TRIDENT_HEAD = registerBlock("trident_head", properties -> new TridentHead(properties.strength(1.0F)
             .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_WART_BLOCK)
     ));
+    public static final Block SEA_MINE = registerBlock("sea_mine", properties -> new SeaMine(properties.strength(4.0F)
+            .requiresCorrectToolForDrops().sound(SoundType.METAL).mapColor(MapColor.METAL)));
+
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();
     }
@@ -66,6 +70,7 @@ public class ModBlocks {
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.COMBAT).register(output -> {
             output.accept(TRIDENT_HEAD);
+            output.accept(SEA_MINE);
         });
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.FUNCTIONAL_BLOCKS).register(output -> {
             output.accept(NAUTILUS_BLOCK);

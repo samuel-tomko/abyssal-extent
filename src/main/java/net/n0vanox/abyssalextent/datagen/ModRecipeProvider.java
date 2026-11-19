@@ -122,6 +122,38 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 ModItems.PRISMALLOY_SPEAR)
                         .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
                         .save(output, "prismalloy_spear_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_HELMET),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_HELMET)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_helmet_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_CHESTPLATE),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_CHESTPLATE)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_chestplate_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_LEGGINGS),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_LEGGINGS)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_leggings_smithing");
+                SmithingTransformRecipeBuilder.smithing(
+                                Ingredient.of(ModItems.PRISMALLOY_UPGRADE),
+                                Ingredient.of(Items.DIAMOND_BOOTS),
+                                Ingredient.of(ModItems.PRISMALLOY_INGOT),
+                                RecipeCategory.COMBAT,
+                                ModItems.PRISMALLOY_BOOTS)
+                        .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
+                        .save(output, "prismalloy_boots_smithing");
             }
         };
     }

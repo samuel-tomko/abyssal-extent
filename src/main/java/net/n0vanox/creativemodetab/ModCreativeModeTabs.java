@@ -24,13 +24,17 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.PRISMALLOY_INGOT);
                         output.accept(ModBlocks.PRISMALLOY_BLOCK);
                         output.accept(ModBlocks.TRIDENT_HEAD);
+                        output.accept(ModItems.PRISMALLOY_UPGRADE);
+                        output.accept(ModItems.PRISMALLOY_HELMET);
+                        output.accept(ModItems.PRISMALLOY_CHESTPLATE);
+                        output.accept(ModItems.PRISMALLOY_LEGGINGS);
+                        output.accept(ModItems.PRISMALLOY_BOOTS);
                         output.accept(ModItems.PRISMALLOY_SWORD);
                         output.accept(ModItems.PRISMALLOY_PICKAXE);
                         output.accept(ModItems.PRISMALLOY_SHOVEL);
                         output.accept(ModItems.PRISMALLOY_AXE);
                         output.accept(ModItems.PRISMALLOY_HOE);
                         output.accept(ModItems.PRISMALLOY_SPEAR);
-                        output.accept(ModItems.PRISMALLOY_UPGRADE);
                     })
                     .build());
 
@@ -42,6 +46,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.NAUTILUS_BLOCK);
                         output.accept(ModItems.ANGLERFISH_SPAWN_EGG);
                         output.accept(ModItems.ANGLERFISH_BUCKET);
+                        output.accept(ModBlocks.SEA_MINE);
                     })
                     .build());
 

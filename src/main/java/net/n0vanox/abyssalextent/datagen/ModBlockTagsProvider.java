@@ -21,7 +21,8 @@ public class ModBlockTagsProvider extends FabricTagsProvider.BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.PRISMALLOY_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.CHROMIUM_BLOCK))
                 .add(ModBlocks.getRK(ModBlocks.NAUTILUS_BLOCK))
-                .add(ModBlocks.getRK(ModBlocks.ANCIENT_MACHINERY));
+                .add(ModBlocks.getRK(ModBlocks.ANCIENT_MACHINERY))
+                .add(ModBlocks.getRK(ModBlocks.SEA_MINE));
 
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.getRK(ModBlocks.PRISMALLOY_BLOCK))

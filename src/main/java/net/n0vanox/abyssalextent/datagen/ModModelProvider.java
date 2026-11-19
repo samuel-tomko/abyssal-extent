@@ -6,7 +6,10 @@ import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.model.ModelTemplates;
 import net.n0vanox.abyssalextent.block.ModBlocks;
+import net.n0vanox.abyssalextent.item.ModArmorMaterials;
 import net.n0vanox.abyssalextent.item.ModItems;
+
+import java.util.Map;
 
 public class ModModelProvider extends FabricModelProvider {
 
@@ -22,6 +25,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockModelGenerators.createTrivialCube(ModBlocks.TRIDENT_HEAD);
         blockModelGenerators.createNonTemplateModelBlock(ModBlocks.NAUTILUS_BLOCK);
+        blockModelGenerators.createNonTemplateModelBlock(ModBlocks.SEA_MINE);
     }
 
     @Override
@@ -41,5 +45,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_AXE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.PRISMALLOY_HOE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateSpear(ModItems.PRISMALLOY_SPEAR);
+
+        itemModelGenerators.generateTrimmableArmorSet(ModItems.PRISMALLOY_HELMET, ModItems.PRISMALLOY_CHESTPLATE, ModItems.PRISMALLOY_LEGGINGS, ModItems.PRISMALLOY_BOOTS, false, Map.of());
+
     }
 }

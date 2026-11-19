@@ -9,6 +9,11 @@
   "item.abyssal-extent.smithing_template.prismalloy_upgrade.base_slot_description": "Add diamond armor, weapon, or tool",
   "item.abyssal-extent.smithing_template.prismalloy_upgrade.additions_slot_description": "Add Prismalloy Ingot",
 
+  "item.abyssal-extent.prismalloy_helmet": "Prismalloy Helmet",
+  "item.abyssal-extent.prismalloy_chestplate": "Prismalloy Chestplate",
+  "item.abyssal-extent.prismalloy_leggings": "Prismalloy Leggings",
+  "item.abyssal-extent.prismalloy_boots": "Prismalloy Boots",
+
   "item.abyssal-extent.prismalloy_sword": "Prismalloy Sword",
   "item.abyssal-extent.prismalloy_pickaxe": "Prismalloy Pickaxe",
   "item.abyssal-extent.prismalloy_shovel": "Prismalloy Shovel",
@@ -24,6 +29,7 @@
   "block.abyssal-extent.chromium_block": "Block of Chromium",
   "block.abyssal-extent.ancient_machinery": "Ancient Machinery",
   "block.abyssal-extent.trident_head": "Trident Head",
+  "block.abyssal-extent.sea_mine": "Sea Mine",
 
   "death.attack.spikes": "%s was impaled by spikes",
   "death.attack.spikes.player": "%s was knocked into spikes by %s",

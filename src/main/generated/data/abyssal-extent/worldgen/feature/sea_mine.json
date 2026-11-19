@@ -1,0 +1,35 @@
+{
+  "type": "minecraft:single_block_pillar",
+  "block": {
+    "id": "minecraft:iron_chain",
+    "properties": {
+      "axis": "y",
+      "waterlogged": "true"
+    }
+  },
+  "can_replace": {
+    "type": "minecraft:matching_fluids",
+    "fluids": "minecraft:water"
+  },
+  "cap_feature": {
+    "feature": {
+      "type": "minecraft:simple_block",
+      "to_place": {
+        "id": "abyssal-extent:sea_mine",
+        "properties": {
+          "waterlogged": "true"
+        }
+      }
+    },
+    "placement": [
+      {
+        "type": "minecraft:offset",
+        "x": 0,
+        "y": 1,
+        "z": 0
+      }
+    ]
+  },
+  "chance_to_continue": 0.8,
+  "direction": "up"
+}

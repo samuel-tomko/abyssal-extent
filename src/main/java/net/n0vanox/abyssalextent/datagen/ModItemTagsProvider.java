@@ -21,5 +21,10 @@ public class ModItemTagsProvider extends FabricTagsProvider.ItemTagsProvider {
         tag(ItemTags.AXES).add(ModItems.getRK(ModItems.PRISMALLOY_AXE));
         tag(ItemTags.HOES).add(ModItems.getRK(ModItems.PRISMALLOY_HOE));
         tag(ItemTags.SPEARS).add(ModItems.getRK(ModItems.PRISMALLOY_SPEAR));
+
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.getRK(ModItems.PRISMALLOY_HELMET));
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.getRK(ModItems.PRISMALLOY_CHESTPLATE));
+        tag(ItemTags.LEG_ARMOR).add(ModItems.getRK(ModItems.PRISMALLOY_LEGGINGS));
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.getRK(ModItems.PRISMALLOY_BOOTS));
     }
 }
