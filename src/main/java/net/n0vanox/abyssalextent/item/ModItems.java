@@ -15,6 +15,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.n0vanox.abyssalextent.block.custom.TridentHead;
+import net.n0vanox.abyssalextent.datagen.ModJukeboxSongs;
 import net.n0vanox.abyssalextent.entity.ModEntities;
 import net.n0vanox.abyssalextent.entity.custom.AnglerfishEntity;
 import net.n0vanox.abyssalextent.item.custom.ModSmithingTemplates;
@@ -22,17 +23,19 @@ import net.n0vanox.abyssalextent.item.custom.ModSmithingTemplates;
 import java.util.function.Function;
 
 public class ModItems {
+    //items
     public static final Item PRISMALLOY_INGOT = registerItem("prismalloy_ingot", Item::new);
     public static final Item CHROMIUM = registerItem("chromium", Item::new);
     public static final Item MACHINED_SCRAP =  registerItem("machined_scrap", Item::new);
 
+    //anglerfish stuff
     public static final Item ANGLERFISH_SPAWN_EGG = registerItem("anglerfish_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.ANGLERFISH)));
-
     public static final Item ANGLERFISH_BUCKET = registerItem("anglerfish_bucket",
             properties -> new MobBucketItem(ModEntities.ANGLERFISH,
                     Fluids.WATER, SoundEvents.BUCKET_EMPTY_FISH, properties.stacksTo(1)));
 
+    //prismalloy utility
     public static final Item PRISMALLOY_SWORD = registerItem("prismalloy_sword",
             properties -> new Item(properties.sword(ModToolMaterials.PRISMALLOY, 3, -2.4F)));
     public static final Item PRISMALLOY_PICKAXE = registerItem("prismalloy_pickaxe",
@@ -46,7 +49,6 @@ public class ModItems {
     public static final Item PRISMALLOY_SPEAR = registerItem("prismalloy_spear",
             properties -> new Item(properties.spear(ModToolMaterials.PRISMALLOY, 1.15F, 1.2F, 0.4F,
                     2.5F, 9.0F, 5.5F, 5.1F, 8.75F, 4.6F)));
-
     public static final Item PRISMALLOY_HELMET = registerItem("prismalloy_helmet",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.HELMET)));
     public static final Item PRISMALLOY_CHESTPLATE = registerItem("prismalloy_chestplate",
@@ -55,9 +57,10 @@ public class ModItems {
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
     public static final Item PRISMALLOY_BOOTS = registerItem("prismalloy_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.PRISMALLOY_ARMOR_MATERIAL, ArmorType.BOOTS)));
-
     public static final Item PRISMALLOY_UPGRADE = registerItem("prismalloy_upgrade_smithing_template", ModSmithingTemplates::createPrismalloyUpgrade);
 
+    //music discs
+    //public static final Item HORIZON_MUSIC_DISC = registerItem("horizon_music_disc", properties -> new Item(properties.jukeboxPlayable(ModJukeboxSongs.HORIZON_KEY).stacksTo(1).rarity(Rarity.UNCOMMON)));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

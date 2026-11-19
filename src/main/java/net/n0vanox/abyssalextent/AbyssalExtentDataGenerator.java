@@ -27,6 +27,7 @@ public class AbyssalExtentDataGenerator implements DataGeneratorEntrypoint {
 	public void buildRegistry(RegistrySetBuilder registryBuilder) {
 		registryBuilder.add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap);
 		registryBuilder.add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap);
+		registryBuilder.add(Registries.JUKEBOX_SONG, ModJukeboxSongs::bootstrap);
 
 		registryBuilder.add(Registries.FEATURE, ModFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);

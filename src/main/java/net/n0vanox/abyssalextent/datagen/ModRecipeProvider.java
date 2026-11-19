@@ -14,6 +14,7 @@ import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.Recipe;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 import net.n0vanox.abyssalextent.block.ModBlocks;
 import net.n0vanox.abyssalextent.item.ModItems;
 
@@ -154,6 +155,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                                 ModItems.PRISMALLOY_BOOTS)
                         .unlocks("has_prismalloy_ingot", has(ModItems.PRISMALLOY_INGOT))
                         .save(output, "prismalloy_boots_smithing");
+                shaped(RecipeCategory.COMBAT, ModBlocks.SEA_MINE)
+                        .pattern(" I ")
+                        .pattern("ITI")
+                        .pattern(" I ")
+                        .define('I', Items.IRON_INGOT)
+                        .define('T', Items.TNT)
+                        .unlockedBy(getHasName(ModBlocks.SEA_MINE), has(ModBlocks.SEA_MINE))
+                        .unlockedBy(getHasName(Items.TNT), has(Items.TNT))
+                        .save(output);
             }
         };
     }

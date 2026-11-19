@@ -116,7 +116,7 @@ public class SeaMine extends Block implements SimpleWaterloggedBlock {
             if (direction == Direction.DOWN) continue;
             BlockPos neighborPos = pos.relative(direction);
             BlockState neighbor = level.getBlockState(neighborPos);
-            if (!neighbor.getCollisionShape(level, neighborPos).isEmpty()) {
+            if (neighbor.isFaceSturdy(level, neighborPos, direction.getOpposite())) {
                 return false;
             }
         }
