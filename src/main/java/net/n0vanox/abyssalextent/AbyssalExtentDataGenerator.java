@@ -7,6 +7,7 @@ import net.minecraft.core.registries.Registries;
 import net.n0vanox.abyssalextent.datagen.*;
 import net.n0vanox.abyssalextent.worldgen.ModFeatures;
 import net.n0vanox.abyssalextent.worldgen.ModPlacedFeatures;
+import net.n0vanox.abyssalextent.worldgen.biome.ModBiomes;
 
 public class AbyssalExtentDataGenerator implements DataGeneratorEntrypoint {
 	@Override
@@ -31,5 +32,8 @@ public class AbyssalExtentDataGenerator implements DataGeneratorEntrypoint {
 
 		registryBuilder.add(Registries.FEATURE, ModFeatures::bootstrap);
 		registryBuilder.add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap);
+
+		registryBuilder.add(Registries.CARVER, ModCarvers::bootstrap);
+		registryBuilder.add(Registries.BIOME, ModBiomes::bootstrap);
 	}
 }

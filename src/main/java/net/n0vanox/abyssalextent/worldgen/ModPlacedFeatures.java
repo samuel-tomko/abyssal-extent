@@ -18,14 +18,22 @@ import java.util.List;
 
 public class ModPlacedFeatures {
 
-    public static final ResourceKey<PlacedFeature> SEA_MINE_PLACED_KEY = registerKey("sea_mine_placed");
+    public static final ResourceKey<PlacedFeature> SEA_MINE_PLACED_SMALL_KEY = registerKey("sea_mine_placed_small");
+    public static final ResourceKey<PlacedFeature> SEA_MINE_PLACED_LARGE_KEY = registerKey("sea_mine_placed_large");
+
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.FEATURE);
-        //SurfaceWaterDepthFilter.forMaxDepth(#) -> find how to make it need a min depth
-        register(context, SEA_MINE_PLACED_KEY, configuredFeatures.getOrThrow(ModFeatures.SEA_MINE_KEY),
+        register(context, SEA_MINE_PLACED_SMALL_KEY, configuredFeatures.getOrThrow(ModFeatures.SEA_MINE_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(32), //lower 32? figure out how to cluster them closer
                         InSquarePlacement.spread(), CountPlacement.of(UniformInt.of(3, 6)),
+                        OffsetPlacement.of(UniformInt.of(-4, 4), ConstantInt.of(0)),
+                        PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(
+                                BlockPredicate.matchesFluids(new Vec3i(0, 2, 0), List.of(Fluids.WATER))),
+                        BiomeFilter.biome()));
+        register(context, SEA_MINE_PLACED_LARGE_KEY, configuredFeatures.getOrThrow(ModFeatures.SEA_MINE_KEY),
+                List.of(RarityFilter.onAverageOnceEvery(4), //lower 32? figure out how to cluster them closer
+                        InSquarePlacement.spread(), CountPlacement.of(UniformInt.of(4, 10)),
                         OffsetPlacement.of(UniformInt.of(-4, 4), ConstantInt.of(0)),
                         PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(
                                 BlockPredicate.matchesFluids(new Vec3i(0, 2, 0), List.of(Fluids.WATER))),

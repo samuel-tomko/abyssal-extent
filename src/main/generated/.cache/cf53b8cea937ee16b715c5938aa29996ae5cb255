@@ -1,5 +1,8 @@
 // 26.3	-999999999-01-01T00:00:00	Abyssal Extent/Abyssal Extent Data Provider
 3141616d888478c8d408173d8a2e5513ac9fbc60 data/abyssal-extent/damage_type/spikes.json
 c5dc267d4d2d5b0fee2465c055d98e4a7cfe865b data/abyssal-extent/painting_variant/dustin_brown_water_bottle.json
+99836350cab12985cd8ce8d9a9a998bd631abac1 data/abyssal-extent/worldgen/biome/abyssal_plains.json
+421815a3911985c17c58dad4aa1fe8be67064b13 data/abyssal-extent/worldgen/carver/abyss_canyon.json
 5bf98f50a2a3a50e5d51cefaf51adb58033b068c data/abyssal-extent/worldgen/feature/sea_mine.json
-dc7a22661a7c480cc8349f9f5ffe5123daa28b8d data/abyssal-extent/worldgen/placed_feature/sea_mine_placed.json
+79b7dde544c6530e9dacbcb4ab46ed703abe4ab5 data/abyssal-extent/worldgen/placed_feature/sea_mine_placed_large.json
+dc7a22661a7c480cc8349f9f5ffe5123daa28b8d data/abyssal-extent/worldgen/placed_feature/sea_mine_placed_small.json

@@ -1,0 +1,53 @@
+{
+  "feature": "abyssal-extent:sea_mine",
+  "placement": [
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 4
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 10,
+        "min_inclusive": 4
+      }
+    },
+    {
+      "type": "minecraft:offset",
+      "x": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": -4
+      },
+      "y": 0,
+      "z": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": -4
+      }
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:matching_fluids",
+        "fluids": "minecraft:water",
+        "offset": [
+          0,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

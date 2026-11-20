@@ -22,6 +22,9 @@ public class ModRegistryDataProvider extends FabricDynamicRegistryProvider {
 
         entries.addAll(registries.lookupOrThrow(Registries.FEATURE));
         entries.addAll(registries.lookupOrThrow(Registries.PLACED_FEATURE));
+
+        entries.addAll(registries.lookupOrThrow(Registries.CARVER));
+        entries.addAll(registries.lookupOrThrow(Registries.BIOME));
     }
 
     @Override
