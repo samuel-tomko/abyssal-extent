@@ -127,14 +127,22 @@
     },
     "minecraft:visual/sky_color": "#7ba4ff"
   },
-  "carvers": "abyssal-extent:abyss_canyon",
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon",
+    "abyssal-extent:abyss_canyon"
+  ],
   "downfall": 0.5,
   "effects": {
     "water_color": "#19328d"
   },
   "features": [
     [],
-    [],
+    [
+      "minecraft:lake_lava_underground",
+      "minecraft:lake_lava_surface"
+    ],
     [
       "minecraft:amethyst_geode"
     ],

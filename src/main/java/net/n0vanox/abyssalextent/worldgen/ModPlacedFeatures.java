@@ -25,18 +25,18 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
         var configuredFeatures = context.lookup(Registries.FEATURE);
         register(context, SEA_MINE_PLACED_SMALL_KEY, configuredFeatures.getOrThrow(ModFeatures.SEA_MINE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(32), //lower 32? figure out how to cluster them closer
+                List.of(RarityFilter.onAverageOnceEvery(32),
                         InSquarePlacement.spread(), CountPlacement.of(UniformInt.of(3, 6)),
                         OffsetPlacement.of(UniformInt.of(-4, 4), ConstantInt.of(0)),
                         PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(
-                                BlockPredicate.matchesFluids(new Vec3i(0, 2, 0), List.of(Fluids.WATER))),
+                                BlockPredicate.matchesFluids(new Vec3i(0, 3, 0), List.of(Fluids.WATER))),//fix them reaching above water
                         BiomeFilter.biome()));
         register(context, SEA_MINE_PLACED_LARGE_KEY, configuredFeatures.getOrThrow(ModFeatures.SEA_MINE_KEY),
-                List.of(RarityFilter.onAverageOnceEvery(4), //lower 32? figure out how to cluster them closer
+                List.of(RarityFilter.onAverageOnceEvery(4),
                         InSquarePlacement.spread(), CountPlacement.of(UniformInt.of(4, 10)),
                         OffsetPlacement.of(UniformInt.of(-4, 4), ConstantInt.of(0)),
                         PlacementUtils.HEIGHTMAP_OCEAN_FLOOR, BlockPredicateFilter.forPredicate(
-                                BlockPredicate.matchesFluids(new Vec3i(0, 2, 0), List.of(Fluids.WATER))),
+                                BlockPredicate.matchesFluids(new Vec3i(0, 3, 0), List.of(Fluids.WATER))),
                         BiomeFilter.biome()));
     }
 

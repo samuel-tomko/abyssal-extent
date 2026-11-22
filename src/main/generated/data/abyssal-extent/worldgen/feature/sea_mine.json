@@ -30,6 +30,6 @@
       }
     ]
   },
-  "chance_to_continue": 0.8,
+  "chance_to_continue": 0.9,
   "direction": "up"
 }

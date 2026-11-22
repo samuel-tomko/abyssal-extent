@@ -37,7 +37,7 @@ public class ModFeatures {
                 .setValue(BlockStateProperties.WATERLOGGED, true);
 
         context.register(SEA_MINE_KEY, new SingleBlockPillarFeature(Holder.direct(new SimpleStateProvider(chain)),
-                BlockPredicate.matchesFluids(Fluids.WATER), Direction.UP, 0.8F, //min 6 blocks, then 80% after - make new class
+                BlockPredicate.matchesFluids(Fluids.WATER), Direction.UP, 0.9F, //min 6 blocks, then 90% after - make new class
                 Optional.of(Holder.direct(new PlacedFeature(Holder.direct(new SimpleBlockFeature(
                         Holder.direct(new SimpleStateProvider(ModBlocks.SEA_MINE.defaultBlockState())))),
                         List.of(OffsetPlacement.vertical(ConstantInt.of(1))))))));

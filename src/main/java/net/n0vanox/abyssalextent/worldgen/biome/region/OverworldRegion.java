@@ -27,7 +27,7 @@ public class OverworldRegion extends Region {
                 .temperature(ParameterUtils.Temperature.span(ParameterUtils.Temperature.COOL, ParameterUtils.Temperature.WARM))
                 .humidity(ParameterUtils.Humidity.FULL_RANGE)
                 .continentalness(ParameterUtils.Continentalness.MUSHROOM_FIELDS)
-                .erosion(ParameterUtils.Erosion.EROSION_0) //higher erosion = more flat
+                .erosion(ParameterUtils.Erosion.EROSION_0) //higher erosion = more flat, more water underground
                 .depth(ParameterUtils.Depth.FULL_RANGE)
                 .weirdness(ParameterUtils.Weirdness.FULL_RANGE)
                 .offset(0.0F)

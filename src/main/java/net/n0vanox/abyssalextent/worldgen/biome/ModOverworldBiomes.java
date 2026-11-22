@@ -23,7 +23,7 @@ public class ModOverworldBiomes {
         spawnBuilder.addSpawn(ModEntities.ANGLERFISH, 50, UniformInt.of(1,2));
 
         BiomeGenerationSettings.Builder biomeBuilder = new BiomeGenerationSettings.Builder(placedFeatureGetter, carverGetter);
-        //BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeBuilder);
+        BiomeDefaultFeatures.addDefaultCarversAndLakes(biomeBuilder);
         BiomeDefaultFeatures.addDefaultCrystalFormations(biomeBuilder);
         BiomeDefaultFeatures.addDefaultMonsterRoom(biomeBuilder);
         BiomeDefaultFeatures.addDefaultUndergroundVariety(biomeBuilder);
@@ -34,9 +34,10 @@ public class ModOverworldBiomes {
         biomeBuilder.addCarver(carverGetter.getOrThrow(ModCarvers.ABYSS_CANYON));
         biomeBuilder.addFeature(GenerationStep.Decoration.SURFACE_STRUCTURES, ModPlacedFeatures.SEA_MINE_PLACED_LARGE_KEY);
 
+        //TODO
 //get darker fog, increase anglerfish, add glowing and eerie abysses
         return OverworldBiomes.baseOcean().specialEffects((new BiomeSpecialEffects.Builder()).waterColor(0x19328d).build())
-                .mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build();
+                .mobSpawnSettings(spawnBuilder.build()).generationSettings(biomeBuilder.build()).build(); // change water color, change fog color, add custom music
     }
 
 }
