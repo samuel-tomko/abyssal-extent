@@ -14,9 +14,10 @@ import net.n0vanox.abyssalextent.AbyssalExtent;
 
 public class ModCarvers {
     public static final ResourceKey<WorldCarver> ABYSS_CANYON =
-            ResourceKey.create(Registries.CARVER,
-                    AbyssalExtent.id("abyss_canyon"));
-//maybe make separate carvers for each biome? eerie abyss skinnier?
+            ResourceKey.create(Registries.CARVER, AbyssalExtent.id("abyss_canyon"));
+    public static final ResourceKey<WorldCarver> EERIE_ABYSS_CANYON =
+            ResourceKey.create(Registries.CARVER, AbyssalExtent.id("eerie_abyss_canyon"));
+
     public static void bootstrap(BootstrapContext<WorldCarver> context) {
         context.register(ABYSS_CANYON, new CanyonWorldCarver(
                 0.99F, //probability of canyon spawning
@@ -30,6 +31,19 @@ public class ModCarvers {
                         UniformFloat.of(1.0F, 2.0F), //horizontal_radius_factor
                         0.75F, 1.0F, //vertical radius default and center values - VF = d + c * m where m is middleness
                         ConstantFloat.of(1F) //y scale
+                )));
+        context.register(EERIE_ABYSS_CANYON, new CanyonWorldCarver(
+                0.99F, //probability of canyon spawning
+                UniformHeight.of(VerticalAnchor.absolute(20),
+                        VerticalAnchor.absolute(40)), //start y
+                UniformFloat.of(-0.125F, 0.125F), //vertical rotation
+                new CanyonWorldCarver.Shape(
+                        UniformFloat.of(0.75F, 1.0F), //distance factor
+                        TrapezoidFloat.of(3.0F, 8.0F, 1.0F), //thickness
+                        3, //width_smoothness
+                        UniformFloat.of(0.75F, 1.0F), //horizontal_radius_factor
+                        0.75F, 1.0F, //vertical radius default and center values - VF = d + c * m where m is middleness
+                        ConstantFloat.of(1.6F) //y scale
                 )));
     }
 }

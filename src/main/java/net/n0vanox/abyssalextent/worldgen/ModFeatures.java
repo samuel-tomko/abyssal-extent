@@ -3,6 +3,7 @@ package net.n0vanox.abyssalextent.worldgen;
 import net.minecraft.core.Direction;
 import net.minecraft.core.Directional;
 import net.minecraft.core.Holder;
+import net.minecraft.core.Vec3i;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BlockStateProviders;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -37,7 +38,7 @@ public class ModFeatures {
                 .setValue(BlockStateProperties.WATERLOGGED, true);
 
         context.register(SEA_MINE_KEY, new SingleBlockPillarFeature(Holder.direct(new SimpleStateProvider(chain)),
-                BlockPredicate.matchesFluids(Fluids.WATER), Direction.UP, 0.9F, //min 6 blocks, then 90% after - make new class
+                BlockPredicate.matchesFluids(new Vec3i(0, 1, 0), List.of(Fluids.WATER)), Direction.UP, 0.9F, //min 6 blocks, then 90% after - make new class
                 Optional.of(Holder.direct(new PlacedFeature(Holder.direct(new SimpleBlockFeature(
                         Holder.direct(new SimpleStateProvider(ModBlocks.SEA_MINE.defaultBlockState())))),
                         List.of(OffsetPlacement.vertical(ConstantInt.of(1))))))));

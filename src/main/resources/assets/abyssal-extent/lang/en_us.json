@@ -40,5 +40,9 @@
   "entity.abyssal-extent.anglerfish": "Anglerfish",
 
   "creativemodetab.abyssal-extent.prismalloy_items": "Prismalloy Items",
-  "creativemodetab.abyssal-extent.life_items": "Abyssal Life"
+  "creativemodetab.abyssal-extent.life_items": "Abyssal Life",
+
+  "biome.abyssal-extent.abyssal_plains": "Abyssal Plains",
+  "biome.abyssal-extent.eerie_abyss": "Eerie Abyss",
+  "biome.abyssal-extent.glowing_abyss": "Glowing Abyss"
 }

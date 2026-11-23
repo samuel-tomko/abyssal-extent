@@ -22,6 +22,7 @@ public class ModBiomes {
         var placedFeatures = context.lookup(Registries.PLACED_FEATURE);
 
         register(context, ABYSSAL_PLAINS, ModOverworldBiomes.abyssalPlains(placedFeatures, carvers));
+        register(context, EERIE_ABYSS, ModOverworldBiomes.eerieAbyss(placedFeatures, carvers));
     }
 
     private static void register(BootstrapContext<Biome> context, ResourceKey<Biome> key, Biome biome) {
